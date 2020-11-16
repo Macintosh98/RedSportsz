@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "proxy": "http://localhost:3000",
   "scripts": {
-    "start": "webpack-dev-server --mode development",
+    "start": "node Backend/app.js",
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
     "server": "nodemon Backend/app",

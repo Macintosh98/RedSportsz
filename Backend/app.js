@@ -11,6 +11,11 @@ const port = process.env.PORT || '3000';
 app.use(logger('dev'));
 app.use(cors());
 
+app.use(express.static('dist'));
+app.use(function(req, res) {
+	res.sendFile(path.join(__dirname, '../dist/index.html'));
+});
+
 
 // all environments
 app.use(express.static(path.join(__dirname, 'public')));
